@@ -3,6 +3,7 @@
 #include "cstring"
 #include "iostream"
 #include <algorithm>
+#include <string.h>
 #include <vector>
 
 unsigned int faStr1(const char *str) {
@@ -12,20 +13,18 @@ unsigned int faStr1(const char *str) {
   int cnt = 0;
   char *p;
   char *copy = strdup(str);
-  p = strtok(copy, " ");
 
   std::vector<std::string> vec_of_string;
 
-  while (p != NULL) {
+  while ((p = strtok_r(copy, " ", &copy))) {
+    std::cout << p << ' ';
     vec_of_string.push_back(p);
-    p = strtok(NULL, " ");
   }
 
   for (auto i : vec_of_string) {
     cnt += std::all_of(i.begin(), i.end(),
                        [](char const &c) { return std::isalpha(c); });
-    // std::cout << i << ' '<<std::all_of(i.begin(), i.end(), [](char const &c)
-    // { return std::isalpha(c);}) <<'\n';
+    std::cout << i << ' ';
   }
 
   return cnt;
@@ -41,13 +40,12 @@ unsigned int faStr2(const char *str) {
   int cnt = 0;
   char *p;
   char *copy = strdup(str);
-  p = strtok(copy, " ");
 
   std::vector<std::string> vec_of_string;
 
-  while (p != NULL) {
+  while ((p = strtok_r(copy, " ", &copy))) {
+    std::cout << p << ' ';
     vec_of_string.push_back(p);
-    p = strtok(NULL, " ");
   }
 
   for (auto w : vec_of_string) {
@@ -78,13 +76,11 @@ unsigned int faStr3(const char *str) {
   int cnt = 0;
   char *p;
   char *copy = strdup(str);
-  p = strtok(copy, " ");
 
   std::vector<std::string> vec_of_string;
-
-  while (p != NULL) {
+  while ((p = strtok_r(copy, " ", &copy))) {
+    std::cout << p << ' ';
     vec_of_string.push_back(p);
-    p = strtok(NULL, " ");
   }
   for (auto i : vec_of_string) {
     cnt += i.size();
