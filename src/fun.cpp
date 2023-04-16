@@ -57,21 +57,15 @@ unsigned int faStr2(const char *str) {
       continue;
     }
     for (int i = 1; i < w.size(); i++) {
-      // std::cout << w[i] << "-"<< isalpha(w[i]) << '\n';
       if (isupper(w[i]) || isalpha(w[i]) == 0) {
-        // std::cout << w[i] << '\n';
         flag = false;
         break;
       }
     }
     if (flag) {
-      // std::cout << "!!" << cnt<< '\n';
       cnt += 1;
-      // std::cout << "!!" << cnt<< '\n';
     }
   }
-  // std::cout << cnt << " ";
-
   return cnt;
 }
 
