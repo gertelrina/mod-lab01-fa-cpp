@@ -3,10 +3,10 @@
 
 #include "cstring"
 #include "iostream"
-#include <string.h>
+#include "string.h"
 
-#include <algorithm>
-#include <vector>
+#include "algorithm"
+#include "vector"
 
 unsigned int faStr1(const char *str) {
   /*Разработать функцию на языке С++,
