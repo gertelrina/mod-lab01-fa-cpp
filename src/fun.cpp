@@ -1,9 +1,11 @@
 // Copyright 2022 UNN-IASR
 #include "fun.h"
+
 #include "cstring"
 #include "iostream"
-#include <algorithm>
 #include <string.h>
+
+#include <algorithm>
 #include <vector>
 
 unsigned int faStr1(const char *str) {
