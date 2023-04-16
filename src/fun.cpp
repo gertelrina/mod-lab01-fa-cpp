@@ -2,8 +2,8 @@
 #include "fun.h"
 #include "cstring"
 #include "iostream"
-#include <string.h>
 #include <algorithm>
+#include <string.h>
 #include <vector>
 
 unsigned int faStr1(const char *str) {
@@ -17,7 +17,6 @@ unsigned int faStr1(const char *str) {
   std::vector<std::string> vec_of_string;
 
   while ((p = strtok_r(copy, " ", &copy))) {
-    std::cout << p << ' ';
     vec_of_string.push_back(p);
   }
 
@@ -44,7 +43,6 @@ unsigned int faStr2(const char *str) {
   std::vector<std::string> vec_of_string;
 
   while ((p = strtok_r(copy, " ", &copy))) {
-    std::cout << p << ' ';
     vec_of_string.push_back(p);
   }
 
@@ -79,7 +77,6 @@ unsigned int faStr3(const char *str) {
 
   std::vector<std::string> vec_of_string;
   while ((p = strtok_r(copy, " ", &copy))) {
-    std::cout << p << ' ';
     vec_of_string.push_back(p);
   }
   for (auto i : vec_of_string) {
